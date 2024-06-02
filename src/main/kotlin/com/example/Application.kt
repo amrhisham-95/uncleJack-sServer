@@ -1,12 +1,10 @@
 package com.example
 
-import com.example.entities.FruitsEntity
 import com.example.plugins.*
 import io.ktor.server.application.*
 import io.ktor.serialization.kotlinx.json.*
 import io.ktor.server.plugins.contentnegotiation.*
-import org.ktorm.database.Database
-import org.ktorm.dsl.*
+
 
 fun main(args: Array<String>) {
     io.ktor.server.netty.EngineMain.main(args)
