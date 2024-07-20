@@ -1,12 +1,11 @@
 package com.example.plugins
 
-import com.example.routing.fruitsRoutes
-import com.example.routing.jacksMixesRoutes
-import com.example.routing.juicesRoutes
-import com.example.routing.servicesRoutes
+import com.example.routing.*
 import io.ktor.server.application.*
+import io.ktor.server.request.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
+import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.Serializable
 
 fun Application.configureRouting() {
@@ -39,8 +38,8 @@ fun Application.configureRouting() {
         }*/
 
 
-        //ابعت الداتا من الpostman الى التطبيق
-       /* post("/login"){
+      /*  //ابعت الداتا من الpostman الى التطبيق
+      post("/login"){
             val userInfo = call.receive<UserInfo>()
             println(userInfo)
             call.respondText ("Everything is working")
@@ -95,8 +94,8 @@ fun Application.configureRouting() {
     juicesRoutes()
     jacksMixesRoutes()
     servicesRoutes()
-
-
+    cartFinalRoutes()
+    billFinalRoutes()
 }
 
 @Serializable
@@ -104,7 +103,6 @@ data class UserInfo(
     val email :String,
     val password:String
 )
-
 
 @Serializable
 data class UserResponse(

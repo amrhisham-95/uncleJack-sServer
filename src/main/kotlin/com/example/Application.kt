@@ -1,38 +1,60 @@
 package com.example
 
+import com.example.models.FruitsData
 import com.example.plugins.*
+import io.ktor.client.*
+import io.ktor.client.engine.cio.*
+import io.ktor.client.request.*
+import io.ktor.client.statement.*
 import io.ktor.server.application.*
 import io.ktor.serialization.kotlinx.json.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 import io.ktor.server.plugins.contentnegotiation.*
+import kotlinx.coroutines.runBlocking
+import kotlin.text.get
 
 
 /*fun main(args: Array<String>) {
     io.ktor.server.netty.EngineMain.main(args)
 }*/
 
-fun main(){
-    embeddedServer(Netty, port = 8080, host = "0.0.0.0"){
+ fun main(){
+    embeddedServer(Netty, port = 8100, host = "0.0.0.0")
+    /* embeddedServer(Netty,  port = (System.getenv("PORT")?:"5000").toInt())*/{
+
+
         install(ContentNegotiation){
             json()
         }
 
+      /*  runBlocking {
+
+            val client = HttpClient(CIO){
+                this@embeddedServer.install(ContentNegotiation){
+                    json()
+                }
+
+            }
+            val response : HttpResponse =client.get ("https://jsonplaceholder.typicode.com/posts")
+            println(response.status)
+            client.close()
+
+        }*/
+
         configureRouting()
+        amr()
+
 
     }.start(wait = true)
 }
+
 
 fun Application.module() {
 
    /* install(ContentNegotiation){
         json()
     }*/
-
-
-    amr()
-
-
 
   /*  //insert values into sql database
     database.insert(FruitsEntity){

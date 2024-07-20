@@ -1,10 +1,7 @@
 package com.example.routing
 
 import  com.example.db.DatabaseConnection
-import com.example.entities.FruitsEntity
-import com.example.entities.JacksMixesEntity
-import com.example.entities.JuicesEntity
-import com.example.entities.ServicesEntity
+import com.example.entities.*
 import com.example.models.*
 import io.ktor.http.*
 import io.ktor.server.application.*
@@ -19,9 +16,9 @@ fun Application.fruitsRoutes() {
 
         //insert data for database inside IntelliJ and read all data on postman
         get("/fruits") {
-            /* db.insert(FruitsEntity) {
+          /*  db.insert(FruitsEntity) {
                 set(it.Name, "أفوكادو")
-                set(it.Type, "Kilo")
+                set(it.Type, "كيلو")
                 set(it.Price, "180")
                 set(
                     it.Image,
@@ -30,7 +27,7 @@ fun Application.fruitsRoutes() {
             }
             db.insert(FruitsEntity) {
                 set(it.Name, "أناناس سكري")
-                set(it.Type, "Kilo")
+                set(it.Type, "كيلو")
                 set(it.Price, "155")
                 set(
                     it.Image,
@@ -39,13 +36,13 @@ fun Application.fruitsRoutes() {
             }
             db.insert(FruitsEntity) {
                 set(it.Name, "باباظ سكري")
-                set(it.Type, "Kilo")
+                set(it.Type, "كيلو")
                 set(it.Price, "25")
                 set(it.Image, "https://backend.lassana.com/images/products/Papaya--1584358144--1584515385.jpg")
             }
             db.insert(FruitsEntity) {
                 set(it.Name, "برتقال بلدي مسكر")
-                set(it.Type, "Kilo")
+                set(it.Type, "كيلو")
                 set(it.Price, "12")
                 set(
                     it.Image,
@@ -54,7 +51,7 @@ fun Application.fruitsRoutes() {
             }
             db.insert(FruitsEntity) {
                 set(it.Name, "تفاح أخضر إيطالي")
-                set(it.Type, "Kilo")
+                set(it.Type, "كيلو")
                 set(it.Price, "85")
                 set(
                     it.Image,
@@ -64,7 +61,7 @@ fun Application.fruitsRoutes() {
 
             db.insert(FruitsEntity) {
                 set(it.Name, "تفاح أصفر إيطالي")
-                set(it.Type, "Kilo")
+                set(it.Type, "كيلو")
                 set(it.Price, "70")
                 set(
                     it.Image,
@@ -75,27 +72,27 @@ fun Application.fruitsRoutes() {
             db.insert(FruitsEntity) {
 
                 set(it.Name, "تفاح سكري سوري")
-                set(it.Type, "Kilo")
+                set(it.Type, "كيلو")
                 set(it.Price, "75")
                 set(it.Image, "https://inno-themes-prod.s3.me-south-1.amazonaws.com/blackberry_wp/126.jpg")
             }
 
             db.insert(FruitsEntity) {
                 set(it.Name, "توت أسباني أسود")
-                set(it.Type, "Kilo")
+                set(it.Type, "كيلو")
                 set(it.Price, "30")
                 set(it.Image, "https://th.bing.com/th/id/OIP.I08CD9AnVWKXCtdVcDQ66gAAAA?rs=1&pid=ImgDetMain")
             }
             db.insert(FruitsEntity) {
                 set(it.Name, "جريب فروت")
-                set(it.Type, "Kilo")
+                set(it.Type, "كيلو")
                 set(it.Price, "20")
                 set(it.Image, "https://th.bing.com/th/id/OIP.gKlb7XIT35Rc_708J2OfPwHaF4?rs=1&pid=ImgDetMain")
             }
 
             db.insert(FruitsEntity) {
                 set(it.Name, "خوخ فلوريدا")
-                set(it.Type, "Kilo")
+                set(it.Type, "كيلو")
                 set(it.Price, "45")
                 set(
                     it.Image,
@@ -105,17 +102,17 @@ fun Application.fruitsRoutes() {
 
             db.insert(FruitsEntity) {
                 set(it.Name, "شهد منجاوي")
-                set(it.Type, "Kilo")
+                set(it.Type, "كيلو")
                 set(it.Price, "15")
                 set(
                     it.Image,
-                    "https://egyptianwatermelon.com/axiecontent/uploads/2022/01/%D8%B4%D9%84%D9%86%D8%B7%D9%8A%D8%A9-494x600-1.png"
+                    "https://img.freepik.com/premium-photo/melon-whole-isolated-white-background-top-view-flat-lay_438009-5093.jpg"
                 )
             }
 
             db.insert(FruitsEntity) {
                 set(it.Name, "عنب أسود مستورد")
-                set(it.Type, "Kilo")
+                set(it.Type, "كيلو")
                 set(it.Price, "100")
                 set(
                     it.Image,
@@ -125,20 +122,20 @@ fun Application.fruitsRoutes() {
 
             db.insert(FruitsEntity) {
                 set(it.Name, "قرع عسل")
-                set(it.Type, "Kilo")
+                set(it.Type, "كيلو")
                 set(it.Price, "25")
                 set(it.Image, "https://patchpuppy.com/wp-content/uploads/2021/08/Increasefiber-364x248.jpg")
             }
             db.insert(FruitsEntity) {
                 set(it.Name, "قصب نتقشر")
-                set(it.Type, "Kilo")
+                set(it.Type, "كيلو")
                 set(it.Price, "30")
                 set(it.Image, "https://media.gemini.media/img/large/2017/1/18/2017_1_18_17_39_41_825.jpg")
             }
 
             db.insert(FruitsEntity) {
                 set(it.Name, "كمثرى أفريقي")
-                set(it.Type, "Kilo")
+                set(it.Type, "كيلو")
                 set(it.Price, "125")
                 set(
                     it.Image,
@@ -148,13 +145,13 @@ fun Application.fruitsRoutes() {
 
             db.insert(FruitsEntity) {
                 set(it.Name, "كيوي")
-                set(it.Type, "Kilo")
+                set(it.Type, "كيلو")
                 set(it.Price, "85")
                 set(it.Image, "https://th.bing.com/th/id/OIP.pdt313qKZWa4Idzgdn7X2wHaFj?rs=1&pid=ImgDetMain")
             }
             db.insert(FruitsEntity) {
                 set(it.Name, "مركوت يوسفي")
-                set(it.Type, "Kilo")
+                set(it.Type, "كيلو")
                 set(it.Price, "25")
                 set(it.Image, "https://th.bing.com/th/id/OIP.0Sz4kizSHpLwiOu_sp04JQHaGv?rs=1&pid=ImgDetMain")
             }
@@ -162,7 +159,7 @@ fun Application.fruitsRoutes() {
             db.insert(FruitsEntity) {
 
                 set(it.Name, "مشمش بشاير")
-                set(it.Type, "Kilo")
+                set(it.Type, "كيلو")
                 set(it.Price, "90")
                 set(
                     it.Image,
@@ -170,42 +167,48 @@ fun Application.fruitsRoutes() {
                 )
 
 
-            db.insert(FruitsEntity) {
-                set(it.Name, "مانجو صديقة صعيدي")
-                set(it.Type, "Kilo")
-                set(it.Price, "50")
-                set(it.Image, "https://www.osmanmarket.com/us/136/pidwebp600/5286/f133004681469472003114-1.webp")
-            }
+                db.insert(FruitsEntity) {
+                    set(it.Name, "مانجو صديقة صعيدي")
+                    set(it.Type, "كيلو")
+                    set(it.Price, "50")
+                    set(it.Image, "https://www.osmanmarket.com/us/136/pidwebp600/5286/f133004681469472003114-1.webp")
+                }
 
 
-            db.insert(FruitsEntity) {
-                set(it.Name, "عنب أخضر")
-                set(it.Type, "Kilo")
-                set(it.Price, "50")
-                set(it.Image, "https://th.bing.com/th/id/R.a4e3376c12fd22095859fb8ece3d0c5c?rik=cltg0uPqWbecbQ&pid=ImgRaw&r=0")
-            }
+                db.insert(FruitsEntity) {
+                    set(it.Name, "عنب أخضر")
+                    set(it.Type, "كيلو")
+                    set(it.Price, "50")
+                    set(
+                        it.Image,
+                        "https://th.bing.com/th/id/R.a4e3376c12fd22095859fb8ece3d0c5c?rik=cltg0uPqWbecbQ&pid=ImgRaw&r=0"
+                    )
+                }
 
-            db.insert(FruitsEntity) {
-                set(it.Name, "برقوق أحمر")
-                set(it.Type, "Kilo")
-                set(it.Price, "60")
-                set(it.Image, "https://th.bing.com/th/id/OIP.AVYBnXrU754fbrXn3ROqfAHaEt?rs=1&pid=ImgDetMain")
-            }
+                db.insert(FruitsEntity) {
+                    set(it.Name, "برقوق أحمر")
+                    set(it.Type, "كيلو")
+                    set(it.Price, "60")
+                    set(it.Image, "https://th.bing.com/th/id/OIP.AVYBnXrU754fbrXn3ROqfAHaEt?rs=1&pid=ImgDetMain")
+                }
 
-            db.insert(FruitsEntity) {
-                set(it.Name, "جوافة بناتي")
-                set(it.Type, "Kilo")
-                set(it.Price, "35")
-                set(it.Image, "https://th.bing.com/th/id/R.72e565d8dddea2eafca33fc562883469?rik=J0E71C5q3sa2vA&pid=ImgRaw&r=0&sres=1&sresct=1")
-            }
+                db.insert(FruitsEntity) {
+                    set(it.Name, "جوافة بناتي")
+                    set(it.Type, "كيلو")
+                    set(it.Price, "35")
+                    set(
+                        it.Image,
+                        "https://th.bing.com/th/id/R.72e565d8dddea2eafca33fc562883469?rik=J0E71C5q3sa2vA&pid=ImgRaw&r=0&sres=1&sresct=1"
+                    )
+                }
 
-            db.insert(FruitsEntity) {
-                set(it.Name, "تفاح أحمر ريد كاب")
-                set(it.Type, "Kilo")
-                set(it.Price, "85")
-                set(it.Image, "https://th.bing.com/th/id/OIP.pN-rb7bSN74RHrQZZMmoKAHaFj?rs=1&pid=ImgDetMain")
+                db.insert(FruitsEntity) {
+                    set(it.Name, "تفاح أحمر ريد كاب")
+                    set(it.Type, "كيلو")
+                    set(it.Price, "85")
+                    set(it.Image, "https://th.bing.com/th/id/OIP.pN-rb7bSN74RHrQZZMmoKAHaFj?rs=1&pid=ImgDetMain")
+                }
             }*/
-
 
             //call.respondText("returning all fruits")
             val fruits = db.from(FruitsEntity).select().map {
@@ -277,10 +280,9 @@ fun Application.fruitsRoutes() {
         //delete data row by id from postman
         delete("/fruits/{id}") {
             val id = call.parameters["id"]?.toInt() ?: -1
-            val updateFruits = call.receive<FruitsDataPosting>()
 
             val rowsEffected = db.delete(FruitsEntity) {
-                    it.id eq id
+                it.id eq id
             }
 
             if (rowsEffected == 1) {
@@ -291,8 +293,6 @@ fun Application.fruitsRoutes() {
         }
 
 
-
-
     }
 }
 
@@ -300,7 +300,7 @@ fun Application.juicesRoutes() {
     val db = DatabaseConnection.database
     routing {
         get("/juices") {
-            /*  db.insert(JuicesEntity) {
+             /* db.insert(JuicesEntity) {
                   set(it.Name, "آيس بوريو")
                   set(it.Type, "آيس")
                   set(it.Price, "55")
@@ -889,7 +889,6 @@ fun Application.juicesRoutes() {
 
 
             //call.respondText("returning all juices")
-
             val juices = db.from(JuicesEntity).select().map {
                 val id = it[JuicesEntity.id]
                 val Name = it[JuicesEntity.Name]
@@ -900,7 +899,46 @@ fun Application.juicesRoutes() {
                 JuicesData(id ?: -1, Name ?: "", Type ?: "", Price ?: "", Image ?: "")
             }
             call.respond(juices)
+        }
 
+
+        //update on data من خلال postman by id
+        put("/juices/{id}") {
+            val id = call.parameters["id"]?.toInt() ?: -1
+            val updateJuices = call.receive<JuicesDataPosting>()
+
+            val rowsEffected = db.update(JuicesEntity) {
+                set(it.Name, updateJuices.Name)
+                set(it.Type, updateJuices.Type)
+                set(it.Price, updateJuices.Price)
+                set(it.Image, updateJuices.Image)
+
+                where {
+                    it.id eq id
+                }
+            }
+
+            if (rowsEffected == 1) {
+                call.respond(HttpStatusCode.OK, FruitsResponse("Data has been updated", true))
+            } else {
+                call.respond(HttpStatusCode.BadRequest, FruitsResponse("failed to update", false))
+            }
+        }
+
+
+        //delete data row by id from postman
+        delete("/juices/{id}") {
+            val id = call.parameters["id"]?.toInt() ?: -1
+
+            val rowsEffected = db.delete(JuicesEntity) {
+                it.id eq id
+            }
+
+            if (rowsEffected == 1) {
+                call.respond(HttpStatusCode.OK, FruitsResponse("Data has been deleted", true))
+            } else {
+                call.respond(HttpStatusCode.BadRequest, FruitsResponse("failed to delete", false))
+            }
         }
     }
 }
@@ -910,209 +948,209 @@ fun Application.jacksMixesRoutes() {
 
     routing {
         get("/jacksMixes") {
-            /*  db.insert(JacksMixesEntity) {
-                  set(it.Name, "استيك نوتيلا")
-                  set(it.Type, "استيك نوتيلا")
-                  set(it.Price, "20")
-                  set(
-                      it.Image,
-                      "https://th.bing.com/th/id/OIP.OQDqPAOayeeg9MVgKiwKWQAAAA?w=320&h=320&rs=1&pid=ImgDetMain"
-                  )
-              }
+            /* db.insert(JacksMixesEntity) {
+                   set(it.Name, "استيك نوتيلا")
+                   set(it.Type, "استيك نوتيلا")
+                   set(it.Price, "20")
+                   set(
+                       it.Image,
+                       "https://th.bing.com/th/id/OIP.OQDqPAOayeeg9MVgKiwKWQAAAA?w=320&h=320&rs=1&pid=ImgDetMain"
+                   )
+               }
 
 
-              db.insert(JacksMixesEntity) {
-                  set(it.Name, "القبطان")
-                  set(it.Type, "مانجو - سوبيا - آيس كريم")
-                  set(it.Price, "40")
-                  set(
-                      it.Image,
-                      "https://shamlola.s3.amazonaws.com/Shamlola_Images/8/src/916627a6fee42c5d4e5566807cd168e7dd3d67bd.jpg"
-                  )
-              }
+               db.insert(JacksMixesEntity) {
+                   set(it.Name, "القبطان")
+                   set(it.Type, "مانجو - سوبيا - آيس كريم")
+                   set(it.Price, "40")
+                   set(
+                       it.Image,
+                       "https://shamlola.s3.amazonaws.com/Shamlola_Images/8/src/916627a6fee42c5d4e5566807cd168e7dd3d67bd.jpg"
+                   )
+               }
 
-              db.insert(JacksMixesEntity) {
-                  set(it.Name, "بروتين")
-                  set(it.Type, "بلح باللبن - مانجو - عسل - آيس كريم - مكسرات")
-                  set(it.Price, "60")
-                  set(
-                      it.Image,
-                      "https://media.linkonlineworld.com/img/large/2017/2/6/2017_2_6_13_5_54_625.jpg"
-                  )
-              }
-
-
-              db.insert(JacksMixesEntity) {
-                  set(it.Name, "روميو و جوليت")
-                  set(it.Type, "رمان - مانجو - فراولة")
-                  set(it.Price, "40")
-                  set(
-                      it.Image,
-                      "https://img-global.cpcdn.com/recipes/269bba2e3369da27/1200x630cq70/photo.jpg"
-                  )
-              }
-
-              db.insert(JacksMixesEntity) {
-                  set(it.Name, "طاقة")
-                  set(it.Type, "بلح باللبن - أوريو - آيس كريم")
-                  set(it.Price, "45")
-                  set(
-                      it.Image,
-                      "https://blogscdn.thehut.net/app/uploads/sites/19/2020/12/Copy-of-Untitled-4_1608203046-176x265.png"
-                  )
-              }
-
-              db.insert(JacksMixesEntity) {
-                  set(it.Name, "فخفخينا")
-                  set(it.Type, "ميكس فاكهة - عصير  - آيس كريم - صوص - مكسرات")
-                  set(it.Price, "50")
-                  set(
-                      it.Image,
-                      "https://i.pinimg.com/originals/61/a3/cb/61a3cbcc124597be70024d88e4cc85e6.png"
-                  )
-              }
-
-              db.insert(JacksMixesEntity) {
-                  set(it.Name, "فروت سلاط")
-                  set(it.Type, "ميكس فاكهة - عصير - صوص - مكسرات")
-                  set(it.Price, "40")
-                  set(
-                      it.Image,
-                      "https://img.freepik.com/premium-photo/bowl-fruit-salad-with-green-leaf-background_900321-26417.jpg"
-                  )
-              }
-
-              db.insert(JacksMixesEntity) {
-                  set(it.Name, "قنبلة شوكليت كيك")
-                  set(it.Type, "شوكليت كيك - قطع شوكليت - مكسرات - صوص شوكليت - آيس كريم")
-                  set(it.Price, "20")
-                  set(
-                      it.Image,
-                      "https://th.bing.com/th/id/OIP.IWGqe7Fh5WBiU7CCMzpuSwHaFD?rs=1&pid=ImgDetMain"
-                  )
-              }
-
-              db.insert(JacksMixesEntity) {
-                  set(it.Name, "قنبلة فاكهة")
-                  set(it.Type, "ميكس فاكهة - عصير مانجو - آيس كريم - بسبوسة - كنافة - مكسرات - صوص فراولة")
-                  set(it.Price, "60")
-                  set(
-                      it.Image,
-                      "https://shattacmon.com/wp-content/uploads/2021/10/WhatsApp-Image-2021-10-27-at-6.25.38-PM.jpeg"
-                  )
-              }
-
-              db.insert(JacksMixesEntity) {
-                  set(it.Name, "قنبلة كيك فراولة")
-                  set(it.Type, " كيك فانيليا - قطع شوكليت - مكسرات - صوص فراولة - آيس كريم")
-                  set(it.Price, "60")
-                  set(
-                      it.Image,
-                      "https://your-recipe.com/wp-content/uploads/2019/11/%D9%83%D9%8A%D9%83%D8%A9-%D8%A7%D9%84%D9%81%D8%B1%D8%A7%D9%88%D9%84%D8%A9.jpg"
-                  )
-              }
+               db.insert(JacksMixesEntity) {
+                   set(it.Name, "بروتين")
+                   set(it.Type, "بلح باللبن - مانجو - عسل - آيس كريم - مكسرات")
+                   set(it.Price, "60")
+                   set(
+                       it.Image,
+                       "https://media.linkonlineworld.com/img/large/2017/2/6/2017_2_6_13_5_54_625.jpg"
+                   )
+               }
 
 
-              db.insert(JacksMixesEntity) {
-                  set(it.Name, "مارينا")
-                  set(it.Type, "مانجو - قطع موز")
-                  set(it.Price, "40")
-                  set(
-                      it.Image,
-                      "https://your-recipe.com/wp-content/uploads/2019/11/%D9%83%D9%8A%D9%83%D8%A9-%D8%A7%D9%84%D9%81%D8%B1%D8%A7%D9%88%D9%84%D8%A9.jpg"
-                  )
-              }
+               db.insert(JacksMixesEntity) {
+                   set(it.Name, "روميو و جوليت")
+                   set(it.Type, "رمان - مانجو - فراولة")
+                   set(it.Price, "40")
+                   set(
+                       it.Image,
+                       "https://img-global.cpcdn.com/recipes/269bba2e3369da27/1200x630cq70/photo.jpg"
+                   )
+               }
 
-              db.insert(JacksMixesEntity) {
-                  set(it.Name, "وافل أناناس")
-                  set(it.Type, "وافل")
-                  set(it.Price, "80")
-                  set(
-                      it.Image,
-                      "https://th.bing.com/th/id/OIP.T68DvpH1RLiUV6cRXxgXaAHaE9?rs=1&pid=ImgDetMain"
-                  )
-              }
+               db.insert(JacksMixesEntity) {
+                   set(it.Name, "طاقة")
+                   set(it.Type, "بلح باللبن - أوريو - آيس كريم")
+                   set(it.Price, "45")
+                   set(
+                       it.Image,
+                       "https://blogscdn.thehut.net/app/uploads/sites/19/2020/12/Copy-of-Untitled-4_1608203046-176x265.png"
+                   )
+               }
 
-              db.insert(JacksMixesEntity) {
-                  set(it.Name, "وافل إم آند إم")
-                  set(it.Type, "وافل")
-                  set(it.Price, "60")
-                  set(
-                      it.Image,
-                      "https://your-recipe.com/wp-content/uploads/2019/11/%D9%83%D9%8A%D9%83%D8%A9-%D8%A7%D9%84%D9%81%D8%B1%D8%A7%D9%88%D9%84%D8%A9.jpg"
-                  )
-              }
+               db.insert(JacksMixesEntity) {
+                   set(it.Name, "فخفخينا")
+                   set(it.Type, "ميكس فاكهة - عصير  - آيس كريم - صوص - مكسرات")
+                   set(it.Price, "50")
+                   set(
+                       it.Image,
+                       "https://i.pinimg.com/originals/61/a3/cb/61a3cbcc124597be70024d88e4cc85e6.png"
+                   )
+               }
 
-              db.insert(JacksMixesEntity) {
-                  set(it.Name, "وافل سنيكرز")
-                  set(it.Type, "وافل")
-                  set(it.Price, "60")
-                  set(
-                      it.Image,
-                      "https://th.bing.com/th/id/R.81751aa4d9381be2af2a6c85488fd612?rik=KH77jL%2fNUz6Y8Q&pid=ImgRaw&r=0"
-                  )
-              }
+               db.insert(JacksMixesEntity) {
+                   set(it.Name, "فروت سلاط")
+                   set(it.Type, "ميكس فاكهة - عصير - صوص - مكسرات")
+                   set(it.Price, "40")
+                   set(
+                       it.Image,
+                       "https://img.freepik.com/premium-photo/bowl-fruit-salad-with-green-leaf-background_900321-26417.jpg"
+                   )
+               }
 
-              db.insert(JacksMixesEntity) {
-                  set(it.Name, "وافل شوكليت")
-                  set(it.Type, "وافل")
-                  set(it.Price, "40")
-                  set(
-                      it.Image, "https://th.bing.com/th/id/OIP.5kGhJtUXYXwfUcDleVot0gHaHa?rs=1&pid=ImgDetMain"
-                  )
-              }
+               db.insert(JacksMixesEntity) {
+                   set(it.Name, "قنبلة شوكليت كيك")
+                   set(it.Type, "شوكليت كيك - قطع شوكليت - مكسرات - صوص شوكليت - آيس كريم")
+                   set(it.Price, "20")
+                   set(
+                       it.Image,
+                       "https://th.bing.com/th/id/OIP.IWGqe7Fh5WBiU7CCMzpuSwHaFD?rs=1&pid=ImgDetMain"
+                   )
+               }
 
-              db.insert(JacksMixesEntity) {
-                  set(it.Name, "وافل كادبوري")
-                  set(it.Type, "وافل")
-                  set(it.Price, "60")
-                  set(
-                      it.Image,
-                      "https://th.bing.com/th/id/R.e0511f85c21984b4b6c9a3e2b04f9d6d?rik=fcdSzffzlDDkdQ&riu=http%3a%2f%2fibakeheshoots.com%2fwp-content%2fuploads%2f2014%2f04%2fchocolate_waffles-5.jpg&ehk=y3KM%2fszK%2b5bXP5CNDmGAow70PGCf%2bGhpI02Vo%2f84m1U%3d&risl=&pid=ImgRaw&r=0"
-                  )
-              }
+               db.insert(JacksMixesEntity) {
+                   set(it.Name, "قنبلة فاكهة")
+                   set(it.Type, "ميكس فاكهة - عصير مانجو - آيس كريم - بسبوسة - كنافة - مكسرات - صوص فراولة")
+                   set(it.Price, "60")
+                   set(
+                       it.Image,
+                       "https://shattacmon.com/wp-content/uploads/2021/10/WhatsApp-Image-2021-10-27-at-6.25.38-PM.jpeg"
+                   )
+               }
+
+               db.insert(JacksMixesEntity) {
+                   set(it.Name, "قنبلة كيك فراولة")
+                   set(it.Type, " كيك فانيليا - قطع شوكليت - مكسرات - صوص فراولة - آيس كريم")
+                   set(it.Price, "60")
+                   set(
+                       it.Image,
+                       "https://www.supermama.me/system/App/Entities/Recipe/images/000/050/581/watermarked/%25D9%2583%25D9%258A%25D9%2583-%25D8%25A7%25D9%2584%25D9%2581%25D8%25B1%25D9%2588%25D9%2584%25D8%25A9-%25D8%25A8%25D8%25A7%25D9%2584%25D9%2583%25D8%25B1%25D9%258A%25D9%2585%25D8%25A9.jpg"
+                   )
+               }
 
 
-              db.insert(JacksMixesEntity) {
-                  set(it.Name, "وافل كيت كات")
-                  set(it.Type, "وافل")
-                  set(it.Price, "60")
-                  set(
-                      it.Image,
-                      "https://99pancakes.in/cdn/shop/products/KitKat_1.jpg?v=1677245695&width=1080"
-                  )
-              }
+               db.insert(JacksMixesEntity) {
+                   set(it.Name, "مارينا")
+                   set(it.Type, "مانجو - قطع موز")
+                   set(it.Price, "40")
+                   set(
+                       it.Image,
+                       "https://shamlola.s3.amazonaws.com/Shamlola_Images/4/src/ba1c8caa4acd9a2480d973ab7ec73ed54db9a561.jpg"
+                   )
+               }
+
+               db.insert(JacksMixesEntity) {
+                   set(it.Name, "وافل أناناس")
+                   set(it.Type, "وافل")
+                   set(it.Price, "80")
+                   set(
+                       it.Image,
+                       "https://th.bing.com/th/id/OIP.T68DvpH1RLiUV6cRXxgXaAHaE9?rs=1&pid=ImgDetMain"
+                   )
+               }
+
+               db.insert(JacksMixesEntity) {
+                   set(it.Name, "وافل إم آند إم")
+                   set(it.Type, "وافل")
+                   set(it.Price, "60")
+                   set(
+                       it.Image,
+                       "https://th.bing.com/th/id/OIP.Pi7SFkfcIOqoTivvLMFrKwHaFc?rs=1&pid=ImgDetMain"
+                   )
+               }
+
+               db.insert(JacksMixesEntity) {
+                   set(it.Name, "وافل سنيكرز")
+                   set(it.Type, "وافل")
+                   set(it.Price, "60")
+                   set(
+                       it.Image,
+                       "https://th.bing.com/th/id/R.81751aa4d9381be2af2a6c85488fd612?rik=KH77jL%2fNUz6Y8Q&pid=ImgRaw&r=0"
+                   )
+               }
+
+               db.insert(JacksMixesEntity) {
+                   set(it.Name, "وافل شوكليت")
+                   set(it.Type, "وافل")
+                   set(it.Price, "40")
+                   set(
+                       it.Image, "https://th.bing.com/th/id/OIP.5kGhJtUXYXwfUcDleVot0gHaHa?rs=1&pid=ImgDetMain"
+                   )
+               }
+
+               db.insert(JacksMixesEntity) {
+                   set(it.Name, "وافل كادبوري")
+                   set(it.Type, "وافل")
+                   set(it.Price, "60")
+                   set(
+                       it.Image,
+                       "https://th.bing.com/th/id/R.e0511f85c21984b4b6c9a3e2b04f9d6d?rik=fcdSzffzlDDkdQ&riu=http%3a%2f%2fibakeheshoots.com%2fwp-content%2fuploads%2f2014%2f04%2fchocolate_waffles-5.jpg&ehk=y3KM%2fszK%2b5bXP5CNDmGAow70PGCf%2bGhpI02Vo%2f84m1U%3d&risl=&pid=ImgRaw&r=0"
+                   )
+               }
 
 
-              db.insert(JacksMixesEntity) {
-                  set(it.Name, "وافل ميكس شوكليت")
-                  set(it.Type, "وافل")
-                  set(it.Price, "65")
-                  set(
-                      it.Image,
-                      "https://jmposner.e2ecdn.uk/Products/waffle-stock-014-web.jpg?w=1000&h=1000&quality=90&scale=canvas"
-                  )
-              }
+               db.insert(JacksMixesEntity) {
+                   set(it.Name, "وافل كيت كات")
+                   set(it.Type, "وافل")
+                   set(it.Price, "60")
+                   set(
+                       it.Image,
+                       "https://99pancakes.in/cdn/shop/products/KitKat_1.jpg?v=1677245695&width=1080"
+                   )
+               }
 
-              db.insert(JacksMixesEntity) {
-                  set(it.Name, "وافل ميكس فروت")
-                  set(it.Type, "وافل")
-                  set(it.Price, "50")
-                  set(
-                      it.Image,
-                      "https://th.bing.com/th/id/R.e91b7c4b93c6608fc7aac558eb36e47b?rik=ddiYQVQgnped3g&pid=ImgRaw&r=0"
-                  )
-              }
 
-              db.insert(JacksMixesEntity) {
-                  set(it.Name, "ويتش آيس كريم")
-                  set(it.Type, "ويتش آيس")
-                  set(it.Price, "40")
-                  set(
-                      it.Image,
-                      "https://images.squarespace-cdn.com/content/v1/5bcf8df392441bc70d809098/1582590958629-3T5IF9JHXT8LXY04XZ7U/big-vanilla-sandwich.v1.jpg"
-                  )
-              }*/
+               db.insert(JacksMixesEntity) {
+                   set(it.Name, "وافل ميكس شوكليت")
+                   set(it.Type, "وافل")
+                   set(it.Price, "65")
+                   set(
+                       it.Image,
+                       "https://jmposner.e2ecdn.uk/Products/waffle-stock-014-web.jpg?w=1000&h=1000&quality=90&scale=canvas"
+                   )
+               }
+
+               db.insert(JacksMixesEntity) {
+                   set(it.Name, "وافل ميكس فروت")
+                   set(it.Type, "وافل")
+                   set(it.Price, "50")
+                   set(
+                       it.Image,
+                       "https://th.bing.com/th/id/R.e91b7c4b93c6608fc7aac558eb36e47b?rik=ddiYQVQgnped3g&pid=ImgRaw&r=0"
+                   )
+               }
+
+               db.insert(JacksMixesEntity) {
+                   set(it.Name, "ويتش آيس كريم")
+                   set(it.Type, "ويتش آيس")
+                   set(it.Price, "40")
+                   set(
+                       it.Image,
+                       "https://images.squarespace-cdn.com/content/v1/5bcf8df392441bc70d809098/1582590958629-3T5IF9JHXT8LXY04XZ7U/big-vanilla-sandwich.v1.jpg"
+                   )
+               }*/
 
 
             //call.respondText("returning all mixes")
@@ -1127,8 +1165,44 @@ fun Application.jacksMixesRoutes() {
                 JacksMixesData(id ?: -1, Name ?: "", Type ?: "", Price ?: "", Image ?: "")
             }
             call.respond(jackMixes)
+        }
 
+        //update on data من خلال postman by id
+        put("/jacksMixes/{id}") {
+            val id = call.parameters["id"]?.toInt() ?: -1
+            val updateJacksMixes = call.receive<JacksMixesDataPosting>()
 
+            val rowsEffected = db.update(JacksMixesEntity) {
+                set(it.Name, updateJacksMixes.Name)
+                set(it.Type, updateJacksMixes.Type)
+                set(it.Price, updateJacksMixes.Price)
+                set(it.Image, updateJacksMixes.Image)
+
+                where {
+                    it.id eq id
+                }
+            }
+
+            if (rowsEffected == 1) {
+                call.respond(HttpStatusCode.OK, FruitsResponse("Data has been updated", true))
+            } else {
+                call.respond(HttpStatusCode.BadRequest, FruitsResponse("failed to update", false))
+            }
+        }
+
+        //delete data row by id from postman
+        delete("/jacksMixes/{id}") {
+            val id = call.parameters["id"]?.toInt() ?: -1
+
+            val rowsEffected = db.delete(JacksMixesEntity) {
+                it.id eq id
+            }
+
+            if (rowsEffected == 1) {
+                call.respond(HttpStatusCode.OK, FruitsResponse("Data has been deleted", true))
+            } else {
+                call.respond(HttpStatusCode.BadRequest, FruitsResponse("failed to delete", false))
+            }
         }
     }
 }
@@ -1138,12 +1212,11 @@ fun Application.servicesRoutes() {
 
     routing {
         get("/services") {
-            /*     db.insert(ServicesEntity) {
-                     set(it.Service, "0")
-                     set(it.Delivery, "15")
-                     set(it.VAT, "2")
-                 }*/
-
+               /*  db.insert(ServicesEntity) {
+                      set(it.Service, "0")
+                      set(it.Delivery, "15")
+                      set(it.VAT, "0")
+                  }*/
 
             //call.respondText("returning all services")
 
@@ -1159,5 +1232,209 @@ fun Application.servicesRoutes() {
 
 
         }
+
+
+        //update on data من خلال postman by id
+        put("/services/{id}") {
+            val id = call.parameters["id"]?.toInt() ?: -1
+            val updateJacksMixes = call.receive<ServicesDataPosting>()
+
+            val rowsEffected = db.update(ServicesEntity) {
+                set(it.Service, updateJacksMixes.Service)
+                set(it.Delivery, updateJacksMixes.Delivery)
+                set(it.VAT, updateJacksMixes.VAT)
+
+                where {
+                    it.id eq id
+                }
+            }
+
+            if (rowsEffected == 1) {
+                call.respond(HttpStatusCode.OK, FruitsResponse("Data has been updated", true))
+            } else {
+                call.respond(HttpStatusCode.BadRequest, FruitsResponse("failed to update", false))
+            }
+        }
     }
 }
+
+fun Application.cartFinalRoutes() {
+    val db = DatabaseConnection.database
+    routing {
+        get("/cartFinal") {
+            //call.respondText("returning all CartFinalEntity")
+            val cartFinal = db.from(CartFinalEntity).select().map {
+                val itemPicFinal = it[CartFinalEntity.itemPicFinal]
+                val itemNameFinal = it[CartFinalEntity.itemNameFinal]
+                val itemPriceFinal = it[CartFinalEntity.itemPriceFinal]
+                val itemTypeFinal = it[CartFinalEntity.itemTypeFinal]
+                val itemQuantityFinal = it[CartFinalEntity.itemQuantityFinal]
+                val timeDate = it[CartFinalEntity.timeDate]
+                val namePerson = it[CartFinalEntity.namePerson]
+                val telephonePerson = it[CartFinalEntity.telephonePerson]
+                val emailPerson = it[CartFinalEntity.emailPerson]
+
+                CartProductsFinal(
+                    itemPicFinal ?: "",
+                    itemNameFinal ?: "",
+                    itemPriceFinal ?: "",
+                    itemTypeFinal ?: "",
+                    itemQuantityFinal ?: "",
+                    timeDate ?: "",
+                    namePerson ?: "",
+                    telephonePerson ?: "",
+                    emailPerson ?: ""
+                )
+            }
+            call.respond(cartFinal)
+        }
+
+        //insert data to database من خلال اني ادخل الداتا من postman واعملها post
+        post("/cartFinal") {
+            val request = call.receive<CartProductsFinalPosting>()
+            val result = db.insert(CartFinalEntity) {
+                set(it.timeDate, request.timeDate)
+                set(it.namePerson, request.namePerson)
+                set(it.telephonePerson, request.telephonePerson)
+                set(it.itemNameFinal, request.itemNameFinal)
+                set(it.itemPriceFinal, request.itemPriceFinal)
+                set(it.itemTypeFinal, request.itemTypeFinal)
+                set(it.itemQuantityFinal, request.itemQuantityFinal)
+                set(it.itemPicFinal,request.itemPicFinal)
+                set(it.emailPerson,request.emailPerson)
+            }
+            if (result == 1) {
+                //send success
+                call.respond(
+                    HttpStatusCode.OK, FruitsResponse(
+                        success = true,
+                        data = "values has been successfully inserted"
+                    )
+                )
+            } else {
+                //send failuire
+                call.respond(
+                    HttpStatusCode.BadRequest, FruitsResponse(
+                        success = false,
+                        data = "failed to insert values"
+                    )
+                )
+            }
+        }
+
+
+        //delete data row by id from postman
+        delete("/cartFinal/{telephonePerson}") {
+            val telephonePerson = call.parameters["telephonePerson"] ?: ""
+
+            val rowsEffected = db.delete(CartFinalEntity) {
+                it.telephonePerson eq telephonePerson
+            }
+
+            if (rowsEffected == 1) {
+                call.respond(HttpStatusCode.OK, FruitsResponse("Data has been deleted", true))
+            } else {
+                call.respond(HttpStatusCode.BadRequest, FruitsResponse("failed to delete", false))
+            }
+        }
+
+    }
+}
+
+fun Application.billFinalRoutes() {
+    val db = DatabaseConnection.database
+    routing {
+        get("/billFinal") {
+            //call.respondText("returning all billFinal")
+            val billFinal = db.from(BillFinalEntity).select().map {
+                val id = it[BillFinalEntity.id]
+                val totalPrice = it[BillFinalEntity.totalPrice]
+                val deliveryFee = it[BillFinalEntity.deliveryFee]
+                val serviceFee = it[BillFinalEntity.serviceFee]
+                val vat = it[BillFinalEntity.vat]
+                val totalFinalPrice = it[BillFinalEntity.totalFinalPrice]
+                val longitude = it[BillFinalEntity.longitude]
+                val latitude = it[BillFinalEntity.latitude]
+                val phoneNumber = it[BillFinalEntity.phoneNumber]
+                val namePerson = it[BillFinalEntity.namePerson]
+                val emailPerson = it[BillFinalEntity.emailPerson]
+                val timeDate = it[BillFinalEntity.timeDate]
+
+                BillFinalData(
+                    id ?: -1,
+                    totalPrice ?: "",
+                    deliveryFee ?: "",
+                    serviceFee ?: "",
+                    vat ?: "",
+                    totalFinalPrice ?: "",
+                    longitude ?: "",
+                    latitude ?: "",
+                    phoneNumber ?: "",
+                    namePerson ?: "",
+                    emailPerson ?: "",
+                    timeDate ?: ""
+                )
+            }
+            call.respond(billFinal)
+        }
+
+
+
+
+        post("/billFinal") {
+            val request = call.receive<BillFinalDataPosting>()
+            val result = db.insert(BillFinalEntity) {
+                set(it.id, request.id)
+                set(it.phoneNumber, request.phoneNumber)
+                set(it.namePerson,request.namePerson)
+                set(it.totalFinalPrice, request.totalFinalPrice)
+                set(it.vat, request.vat)
+                set(it.serviceFee, request.serviceFee)
+                set(it.deliveryFee, request.deliveryFee)
+                set(it.longitude, request.longitude)
+                set(it.latitude, request.latitude)
+                set(it.totalPrice, request.totalPrice)
+                set(it.emailPerson,request.emailPerson)
+                set(it.timeDate,request.timeDate)
+            }
+            if (result == 1) {
+                //send success
+                call.respond(
+                    HttpStatusCode.OK, FruitsResponse(
+                        success = true,
+                        data = "values has been successfully inserted"
+                    )
+                )
+            } else {
+                //send failuire
+                call.respond(
+                    HttpStatusCode.BadRequest, FruitsResponse(
+                        success = false,
+                        data = "failed to insert values"
+                    )
+                )
+            }
+        }
+
+
+
+        //delete data row by id from postman
+        delete("/billFinal/{phoneNumber}") {
+            val phoneNumber = call.parameters["phoneNumber"] ?: ""
+
+            val rowsEffected = db.delete(BillFinalEntity) {
+                it.phoneNumber eq phoneNumber
+            }
+
+            if (rowsEffected == 1) {
+                call.respond(HttpStatusCode.OK, FruitsResponse("Data has been deleted", true))
+            } else {
+                call.respond(HttpStatusCode.BadRequest, FruitsResponse("failed to delete", false))
+            }
+        }
+    }
+}
+
+
+
+
